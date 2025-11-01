@@ -1,0 +1,5 @@
+po_lua_estelar = int(input().strip())
+essencia_dragao = int(input().strip())
+lagrimas_fenix = int(input().strip())
+custo_total = (po_lua_estelar * 5) + (essencia_dragao * 3) + (lagrimas_fenix * 8)
+print(custo_total)
