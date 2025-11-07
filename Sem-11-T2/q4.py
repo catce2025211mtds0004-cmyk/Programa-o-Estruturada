@@ -1,14 +1,14 @@
-def valores(codigo, quantidade):
+def valores(codigo):
     if codigo == 'H':
-        return 5.50 * quantidade
+        return 5.50 
     elif codigo == 'C':
-        return 6.80 * quantidade
+        return 6.80 
     elif codigo == 'M':
-        return 4.50 * quantidade
+        return 4.50 
     elif codigo == 'A':
-        return 7.00 * quantidade
+        return 7.00 
     elif codigo == 'Q':
-        return 4.00 * quantidade
+        return 4.00 
     else:
         return 0
 
@@ -17,11 +17,11 @@ def main():
     
     while True:
         print("""CÓDIGO  PRODUTO         PREÇO (R$)
-H       Hamburger       5.50
-C       Cheeseburger    6.80
-M       Misto Quente    4.50
-A       Americano       7.00
-Q       Queijo Prato    4.00
+H       Hamburger       5,50
+C       Cheeseburger    6,80
+M       Misto Quente    4,50
+A       Americano       7,00
+Q       Queijo Prato    4,00
 X       PARA TOTAL DA CONTA""")
 
         codigo = input().strip().upper()
@@ -29,9 +29,8 @@ X       PARA TOTAL DA CONTA""")
         if codigo == 'X':
             break
 
-        quantidade = int(input().strip())
 
-        soma += valores(codigo, quantidade)
+        soma += valores(codigo)
         
     print(f"{soma:.2f}")
     
