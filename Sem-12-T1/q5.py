@@ -4,11 +4,11 @@ def calcular_populacao_dodo(populacao_inicial):
     limite = populacao_inicial * 0.1
 
     while populacao_atual >= limite:
-        nascimentos = int(populacao_atual * 0.01)
-        mortes = int(populacao_atual * 0.06)
+        nascimentos = populacao_atual * 0.01
+        mortes = populacao_atual * 0.06
         populacao_atual += nascimentos - mortes
 
-        print(f"{ano},{nascimentos},{mortes},{int(populacao_atual)}")
+        print(f"{ano},{int(nascimentos)},{round(mortes)},{round(populacao_atual)}")
         ano += 1
 
 def main():
